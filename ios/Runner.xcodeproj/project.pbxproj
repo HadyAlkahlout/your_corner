@@ -105,7 +105,6 @@
 				8BCFA6BC7707BF9ACAED0DB8 /* Pods-RunnerTests.release.xcconfig */,
 				D901C508DD2B075B49788CA6 /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -475,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hadi.yourcorner.yourCorner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hadi.yourcorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

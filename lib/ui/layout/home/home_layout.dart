@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:your_corner/ui/module/main/chat/chats_screen.dart';
+import 'package:your_corner/ui/module/main/notification/notifications_screen.dart';
 import 'package:your_corner/ui/style/color.dart';
 import 'cubit/cubit.dart';
 import 'cubit/states.dart';
@@ -40,12 +42,14 @@ class HomeLayout extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     print('Open Notifications Screen');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationsScreen()),);
                   },
                   icon: SvgPicture.asset('assets/images/ic_notifications.svg'),
                 ),
                 IconButton(
                   onPressed: () {
                     print('Open Chats Screen');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatsScreen()),);
                   },
                   icon: SvgPicture.asset('assets/images/ic_chat.svg'),
                 ),
@@ -193,48 +197,48 @@ class HomeLayout extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: InkWell(
-                            onTap: () {
-                              if (cubit.currentIndex != 3) {
-                                cubit.changeIndex(3);
-                              }
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                cubit.currentIndex == 3
-                                    ? SvgPicture.asset(
-                                        "assets/images/ic_booking_active.svg")
-                                    : SvgPicture.asset(
-                                        "assets/images/ic_booking.svg"),
-                                const SizedBox(
-                                  height: 8.0,
-                                ),
-                                Text(
-                                  AppLocalizations.of(context)!.services,
-                                  style: TextStyle(
-                                    decoration: TextDecoration.none,
-                                    color: cubit.currentIndex == 3
-                                        ? HexColor(accentColor)
-                                        : Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Montserrat',
-                                    fontSize: 12.0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  // Expanded(
+                  //   child: Column(
+                  //     mainAxisSize: MainAxisSize.min,
+                  //     crossAxisAlignment: CrossAxisAlignment.center,
+                  //     children: [
+                  //       Expanded(
+                  //         child: InkWell(
+                  //           onTap: () {
+                  //             if (cubit.currentIndex != 3) {
+                  //               cubit.changeIndex(3);
+                  //             }
+                  //           },
+                  //           child: Column(
+                  //             mainAxisAlignment: MainAxisAlignment.center,
+                  //             children: [
+                  //               cubit.currentIndex == 3
+                  //                   ? SvgPicture.asset(
+                  //                       "assets/images/ic_booking_active.svg")
+                  //                   : SvgPicture.asset(
+                  //                       "assets/images/ic_booking.svg"),
+                  //               const SizedBox(
+                  //                 height: 8.0,
+                  //               ),
+                  //               Text(
+                  //                 AppLocalizations.of(context)!.services,
+                  //                 style: TextStyle(
+                  //                   decoration: TextDecoration.none,
+                  //                   color: cubit.currentIndex == 3
+                  //                       ? HexColor(accentColor)
+                  //                       : Colors.white,
+                  //                   fontWeight: FontWeight.bold,
+                  //                   fontFamily: 'Montserrat',
+                  //                   fontSize: 12.0,
+                  //                 ),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   Expanded(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,

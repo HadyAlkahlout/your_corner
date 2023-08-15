@@ -2,14 +2,15 @@ abstract class OffersStates {}
 
 class OffersInitialStates extends OffersStates{}
 
-// class OffersLoadingState extends OffersStates{}
-//
-// class DashboardSuccessState extends OffersStates{
-//   DashboardSuccessState({required this.response});
-//   DashboardResponse response;
-// }
-//
-// class DashboardErrorState extends OffersStates{
-//   DashboardErrorState({required this.error});
-//   String error;
-// }
+class OffersChangeTapStates extends OffersStates{}
+
+class OffersChangeSubTapStates extends OffersStates{}
+
+class OffersLoadingState extends OffersStates{}
+
+class OffersSuccessState extends OffersStates{}
+
+class OffersErrorState extends OffersStates{
+  OffersErrorState({required this.error});
+  String error;
+}

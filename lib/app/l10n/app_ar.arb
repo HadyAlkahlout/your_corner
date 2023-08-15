@@ -85,5 +85,28 @@
   "terms": "Terms & Conditions",
   "aboutUs": "About us",
   "logout": "Logout",
-  "appVersion": "App version:"
+  "appVersion": "App version:",
+
+  "notifications": "Notifications",
+
+  "chat": "Chat",
+
+  "createOffers": "Create Offers",
+  "trackOffers": "Track Offers",
+  "activateNow": "Activate Now",
+  "createNow": "Create Now",
+  "recommendedOffers": "Recommended Offers For You",
+  "customerOffers": "Custom Offer For You",
+  "all": "All",
+  "active": "Active",
+  "scheduled": "Scheduled",
+  "inactive": "Inactive",
+  "startDate": "Start date:",
+  "discountGiven": "Discount Given",
+  "effectiveDiscount": "Effective Discount %",
+  "offerDetails": "Offer Details",
+  "offerApplicable": "Offer applicable for:",
+  "minimumValue": "Minimum order value:",
+  "paymentMode": "Payment mode:",
+  "stop": "Stop"
 }

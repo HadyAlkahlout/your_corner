@@ -3,6 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:your_corner/ui/module/auth/login/login_screen.dart';
+import 'package:your_corner/ui/module/main/account/about_us/abou_us_screen.dart';
+import 'package:your_corner/ui/module/main/account/faqs/faqs_screen.dart';
+import 'package:your_corner/ui/module/main/account/privacy/privacy_screen.dart';
+import 'package:your_corner/ui/module/main/account/terms/terms_screen.dart';
 import 'package:your_corner/ui/style/color.dart';
 
 import 'cubit/cubit.dart';
@@ -150,7 +154,9 @@ class AccountScreen extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const FAQsScreen(),),);
+                          },
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -198,7 +204,9 @@ class AccountScreen extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const PrivacyScreen(),),);
+                          },
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -222,7 +230,9 @@ class AccountScreen extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const TermsScreen(),),);
+                          },
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -246,7 +256,9 @@ class AccountScreen extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutUsScreen(),),);
+                          },
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -298,6 +310,40 @@ class AccountScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          height: 24,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              AppLocalizations.of(context)!.appVersion,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'Lato',
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            const Text(
+                              '1.0.0',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'Lato',
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 16,
                         ),
                       ],
                     ),
